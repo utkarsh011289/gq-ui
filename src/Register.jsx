@@ -44,8 +44,11 @@ const Input = ({ lbl, name, value, type, hasError, error, handleChange }) => {
 }
 
 const Register = () => {
-    const [fnSave,{ loading, data, error }] = useMutation(SAVE_STUDENT)
+    const [fnSave] = useMutation(SAVE_STUDENT)
+   // const [fnSave,{ loading, data, error }] = useMutation(SAVE_STUDENT)
     const [inputControls, setInputControls] = useState(data)
+
+    const [message, setMessage] = useState('');
 
 
     const handleChange = (eve) => {
@@ -84,6 +87,10 @@ const Register = () => {
                 data: dataObj
             }
         })
+
+        
+        
+        setMessage('Your Record Inserted Successfully');
         console.log(res);
     }
 
@@ -101,6 +108,7 @@ const Register = () => {
                     <button onClick={fnRegister} className='btn btn-primary'>Register</button>
                 </div>
             </div>
+            {message && <p>{message}</p>}
         </div>
     )
 }
