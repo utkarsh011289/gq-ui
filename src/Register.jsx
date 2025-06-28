@@ -88,6 +88,15 @@ const Register = () => {
             }
         })
 
+        // Reset all input controls after successful submission
+    const resetInputControls = inputControls.map(obj => ({
+        ...obj,
+        value: '', // Reset value to empty
+        hasError: false // Also reset error state if needed
+    }));
+
+    setInputControls(resetInputControls);
+
         
         
         setMessage('Your Record Inserted Successfully');
