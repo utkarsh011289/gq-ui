@@ -17,8 +17,8 @@ import { useLazyQuery } from '@apollo/client';
   if (loading) return <div>Loading...</div>
   if (error) return <div>{error.message}</div>
   return <div>
-    <button onClick={handleClick}>Get Users</button>
-    <table border="2px">
+    <button className='btn btn-primary mb-3 mt-3' onClick={handleClick}>Get Users</button>
+   {data && <table className='table table-bordered'>
       <tr>
         <th>ID</th>
         <th>Name</th>
@@ -35,7 +35,7 @@ import { useLazyQuery } from '@apollo/client';
           </tr>
         })
       }
-    </table>
+    </table> }
   </div>
 }
 

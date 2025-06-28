@@ -8,9 +8,11 @@ const Students = lazy(() => import("./Students"))
 export const Menu = () => {
   return (
     <BrowserRouter>
+    <div className='menu'>
       <Link to="home" >Home</Link>
       <Link to="register" >Register</Link>
       <Link to="students" >Students</Link>
+      </div>
       <Suspense fallback="Loading...">
         <Routes>
           <Route path="/home" element={<Home />} />

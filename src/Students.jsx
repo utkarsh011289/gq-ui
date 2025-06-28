@@ -9,7 +9,7 @@ const Students = () => {
   if (loading) return <div>Loading...</div>
   if (error) return <div>{error.message}</div>
   return (
-    <table border="2px">
+    <table className='table table-bordered table-striped'>
       <tr>
         <th>ID</th>
         <th>Name</th>

@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.header{
+  font-size:50px ;
+  line-height: 200px;
+
+}
+.menu{
+  text-align: right;
+  line-height: 50px;
+  background-color: rgb(106, 186, 107);
+}
+.menu>a{
+  margin-right: 15px;
+  letter-spacing: 5px;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+}
